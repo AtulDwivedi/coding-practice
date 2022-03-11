@@ -3,7 +3,7 @@ package com.atuldwivedi.codingpractice.algo.dp;
 /**
  * @author Atul Dwivedi
  */
-public class LongestCommonsubsequence01 {
+public class LongestCommonSubsequence01 {
     public static void main(String[] args) {
         String str1 = "AGGTAB";
         String str2 = "GXTXAYB";

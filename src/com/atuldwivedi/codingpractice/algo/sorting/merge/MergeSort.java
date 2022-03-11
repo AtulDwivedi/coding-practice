@@ -9,18 +9,35 @@ import java.util.Arrays;
  */
 public class MergeSort {
 
+    /**
+     * Merge Sort of integer array
+     *
+     * @param arr original array
+     * @param l   left most index of array
+     * @param r   right most index of array
+     *            <p>
+     *            Algorithm:
+     *            1. Sort
+     *            1.1 Find mid of array
+     *            1.2 sort array between left most index l to mid index, both inclusive
+     *            1.3 sort array between next of mid i.e. (m+1) to right most index r, both inclusive
+     *            2. Merge
+     *            2.1 Perform sorted merge on both arrays arr[...,l,...,m,m+1,...,r...]
+     *            2.2 Two part of array are from l to m and m+1 to r
+     */
     public void sort(int[] arr, int l, int r) {
         if (l < r) {
             int m = l + (r - l) / 2;
             sort(arr, l, m);
             sort(arr, m + 1, r);
-            merge(arr, l, m, r);
+            sortedMerge(arr, l, m, r);
         }
     }
 
-    private void merge(int[] arr, int l, int m, int r) {
+    private void sortedMerge(int[] arr, int l, int m, int r) {
+        //length of array = (last index - first index) + 1
         int n1 = (m - l) + 1;
-        int n2 = r - m;
+        int n2 = (r - (m + 1)) + 1;
 
         int[] L = new int[n1];
         int[] R = new int[n2];
