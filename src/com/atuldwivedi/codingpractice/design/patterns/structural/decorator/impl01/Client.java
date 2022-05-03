@@ -15,6 +15,6 @@ public class Client {
         System.out.println();
 
         MSTeamsDecorator msTeamsDecorator = new MSTeamsDecorator(smsDecorator);
-        msTeamsDecorator.notify("Error rate increased to 5o% in Kibana.");
+        msTeamsDecorator.notify("Error rate increased to 50% in Kibana.");
     }
 }
