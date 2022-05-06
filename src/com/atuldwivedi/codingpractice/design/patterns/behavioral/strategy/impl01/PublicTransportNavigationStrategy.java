@@ -3,7 +3,7 @@ package com.atuldwivedi.codingpractice.design.patterns.behavioral.strategy.impl0
 /**
  * @author Atul Dwivedi
  */
-public class PublicTransportStrategy implements NavigationStrategy {
+public class PublicTransportNavigationStrategy implements NavigationStrategy {
     @Override
     public void navigate(String source, String destination) {
         System.out.println("Take public transport from " + source + " to " + destination);

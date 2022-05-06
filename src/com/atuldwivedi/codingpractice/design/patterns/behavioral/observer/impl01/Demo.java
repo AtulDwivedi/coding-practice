@@ -8,8 +8,12 @@ import java.io.File;
 public class Demo {
     public static void main(String[] args) {
         Editor editor = new Editor();
-        editor.eventManager.subscribe("open", new EmailNotificationListener("abc@xyz.com"));
-        editor.eventManager.subscribe("save", new LogListener(new File("log.txt")));
+
+        EmailEventListener emailEventListener = new EmailEventListener("abc@xyz.com");
+        LogEventListener logEventListener = new LogEventListener(new File("log.txt"));
+
+        editor.eventManager.subscribe("open", emailEventListener);
+        editor.eventManager.subscribe("save", logEventListener);
 
         try {
             editor.open("test.txt");

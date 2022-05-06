@@ -5,9 +5,12 @@ package com.atuldwivedi.codingpractice.design.patterns.behavioral.strategy.impl0
  */
 public class Client {
     public static void main(String[] args) {
+        NavigationStrategy cabNavigationStrategy = new CabNavigationStrategy();
+        NavigationStrategy walkNavigationStrategy = new WalkNavigationStrategy();
+        NavigationStrategy ptNavigationStrategy = new PublicTransportNavigationStrategy();
+
         Navigator navigator = new Navigator();
-        NavigationStrategy navigationStrategy = new CabStrategy();
-        navigator.setNavigatorStrategy(navigationStrategy);
+        navigator.setNavigatorStrategy(cabNavigationStrategy);
 
         navigator.navigate("Bangalore", "Delhi");
     }

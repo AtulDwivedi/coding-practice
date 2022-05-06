@@ -3,7 +3,7 @@ package com.atuldwivedi.codingpractice.design.patterns.behavioral.strategy.impl0
 /**
  * @author Atul Dwivedi
  */
-public class WalkingStrategy implements NavigationStrategy {
+public class WalkNavigationStrategy implements NavigationStrategy {
     @Override
     public void navigate(String source, String destination) {
         System.out.println("Walk from " + source + " to " + destination);

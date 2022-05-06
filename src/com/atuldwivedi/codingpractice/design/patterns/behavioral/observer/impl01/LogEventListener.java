@@ -5,10 +5,10 @@ import java.io.File;
 /**
  * @author Atul Dwivedi
  */
-public class LogListener implements EventListener {
+public class LogEventListener implements EventListener {
     private File log;
 
-    public LogListener(File log) {
+    public LogEventListener(File log) {
         this.log = log;
     }
 
