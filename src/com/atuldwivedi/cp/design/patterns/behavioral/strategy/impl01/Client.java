@@ -13,5 +13,8 @@ public class Client {
         navigator.setNavigatorStrategy(cabNavigationStrategy);
 
         navigator.navigate("Bangalore", "Delhi");
+
+        navigator.setNavigatorStrategy(ptNavigationStrategy);
+        navigator.navigate("Bangalore", "Delhi");
     }
 }
