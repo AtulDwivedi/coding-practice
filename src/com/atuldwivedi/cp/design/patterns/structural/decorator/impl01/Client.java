@@ -6,15 +6,16 @@ package com.atuldwivedi.cp.design.patterns.structural.decorator.impl01;
 public class Client {
     public static void main(String[] args) {
         Notifier notifier = new BaseNotifier();
-        BaseNotifierDecorator baseNotifierDecorator = new BaseNotifierDecorator(notifier);
-        SlackDecorator slackDecorator = new SlackDecorator(baseNotifierDecorator);
-        SMSDecorator smsDecorator = new SMSDecorator(slackDecorator);
 
-        smsDecorator.notify("Error rate increased to 25% in Kibana.");
+        BaseNotifierDecorator baseNotifierDecorator = new BaseNotifierDecorator(notifier);
+        SlackNotifierDecorator slackNotifierDecorator = new SlackNotifierDecorator(baseNotifierDecorator);
+        SMSNotifierDecorator smsNotifierDecorator = new SMSNotifierDecorator(slackNotifierDecorator);
+
+        smsNotifierDecorator.notify("Error rate increased to 25% in Kibana.");
 
         System.out.println();
 
-        MSTeamsDecorator msTeamsDecorator = new MSTeamsDecorator(smsDecorator);
-        msTeamsDecorator.notify("Error rate increased to 50% in Kibana.");
+        MSTeamsNotifierDecorator msTeamsNotifierDecorator = new MSTeamsNotifierDecorator(smsNotifierDecorator);
+        msTeamsNotifierDecorator.notify("Error rate increased to 50% in Kibana.");
     }
 }

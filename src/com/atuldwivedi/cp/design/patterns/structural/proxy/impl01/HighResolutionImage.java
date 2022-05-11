@@ -4,6 +4,7 @@ package com.atuldwivedi.cp.design.patterns.structural.proxy.impl01;
  * @author Atul Dwivedi
  */
 public class HighResolutionImage implements Image {
+
     public HighResolutionImage(String imagePath) {
         loadImage(imagePath);
     }
