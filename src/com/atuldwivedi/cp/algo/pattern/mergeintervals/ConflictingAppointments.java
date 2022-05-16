@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * @author Atul Dwivedi
- *
+ * <p>
  * Reference
  * https://www.educative.io/courses/grokking-the-coding-interview/qVV79nGVgAG
  */
@@ -57,11 +57,11 @@ public class ConflictingAppointments {
         Arrays.sort(intervals, (a, b) -> Integer.compare(a.start, b.start));
         List<Integer> conflictingAppointments = new ArrayList<>();
         for (int i = 1; i < intervals.length; i++) {
-            if(intervals[i].start < intervals[i - 1].end){
+            if (intervals[i].start < intervals[i - 1].end) {
                 //conflictingAppointments.
             }
         }
-return null;
+        return null;
     }
 }
 
