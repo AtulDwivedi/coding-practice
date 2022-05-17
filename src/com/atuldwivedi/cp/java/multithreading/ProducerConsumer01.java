@@ -5,7 +5,7 @@ package com.atuldwivedi.cp.java.multithreading;
  */
 public class ProducerConsumer01 {
     public static void main(String[] args) throws InterruptedException {
-        final BlockingQueueWithMutex<Integer> bq = new BlockingQueueWithMutex<>(5);
+        final BlockingQueue<Integer> bq = new BlockingQueue<>(5);
 
         Thread producer = new Thread(() -> {
             try {

@@ -11,6 +11,17 @@ public class BFSOnTwoDimensionalArray {
     static int[] dRow = {-1, 0, 1, 0};
     static int[] dCol = {0, 1, 0, -1};
 
+    /**
+     * @param row
+     * @param col
+     * @param grid
+     * @param visited all visited cells
+     *                <p>
+     *                Time Complexity: O(n*m)
+     *                Space Complexity: O(n*m)
+     *                Reference:
+     *                https://www.geeksforgeeks.org/breadth-first-traversal-bfs-on-a-2d-array/
+     */
     private static void breadthFirstSearch(int row, int col, int[][] grid, boolean[][] visited) {
         Queue<Pair> queue = new LinkedList<>();
         queue.add(new Pair(row, col));
