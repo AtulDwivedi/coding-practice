@@ -4,7 +4,7 @@
 ----
 
 ## Sections
-- [Design Patterns](https://github.com/AtulDwivedi/coding-practice/blob/main/src/com/atuldwivedi/codingpractice/design/patterns/Design-Patterns.md)
+- [Design Patterns](src/com/atuldwivedi/cp/design/patterns/Design-Patterns.md)
 - [Design Principles](https://github.com/AtulDwivedi/coding-practice/blob/main/src/com/atuldwivedi/codingpractice/design/principles/Design-Principles.md)
 - [Data Structures](https://github.com/AtulDwivedi/coding-practice/blob/main/src/com/atuldwivedi/codingpractice/ds/Data-Structures.md)
 - [Algorithms](https://github.com/AtulDwivedi/coding-practice/blob/main/src/com/atuldwivedi/codingpractice/algo/Algorithms.md)  
